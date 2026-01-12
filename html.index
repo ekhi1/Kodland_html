@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montaje de Ordenadores</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        /* HEADER */
+        header {
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+            url('https://images.unsplash.com/photo-1611078482962-7d23de8f7c1b?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: fadeInDown 1s ease;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #f1c40f;
+            color: #2c3e50;
+        }
+
+        /* SECCIONES */
+        section {
+            max-width: 1200px;
+            margin: -3rem auto 2rem;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        /* Degradados en secciones */
+        section:nth-child(2) { background: linear-gradient(135deg, #f9f9f9, #e0f7fa); }
+        section:nth-child(3) { background: linear-gradient(135deg, #f9f9f9, #fff3e0); }
+        section:nth-child(4) { background: linear-gradient(135deg, #f9f9f9, #fce4ec); }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        /* COMPONENTES COMO TARJETAS */
+        .components-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .component {
+            background: #ffffff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .component:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .component img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .component div {
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .component h3 {
+            margin-bottom: 0.5rem;
+            color: #e67e22;
+            font-size: 1.2rem;
+        }
+
+        .component p {
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            color: #555;
+        }
+
+        button {
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            color: white;
+            border: none;
+            padding: 0.7rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, #8e44ad, #3498db);
+        }
+
+        /* CARRITO */
+        #cart { margin-top: 1rem; }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            padding: 0.7rem 1rem;
+            background: #f0f0f0;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        }
+        #total {
+            margin-top: 1rem;
+            font-weight: bold;
+            text-align: right;
+            font-size: 1.2rem;
+            color: #e67e22;
+        }
+
+        /* ANIMACIONES */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width: 600px){
+            header h1 { font-size: 2rem; }
+            button { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Montaje de Ordenadores</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="opiniones.html">Opiniones y Soporte</a>
+        </nav>
+    </header>
+
+    <!-- Sección 1: Explicación -->
+    <section>
+        <h2>¿Cómo funciona el montaje de ordenadores?</h2>
+        <p>Montar un ordenador consiste en ensamblar diversos componentes como la placa base, procesador, memoria RAM, almacenamiento y tarjeta gráfica para crear un equipo funcional. Cada componente cumple una función específica y su correcta instalación garantiza un rendimiento óptimo.</p>
+    </section>
+
+    <!-- Sección 2: Componentes Populares -->
+    <section>
+        <h2>Componentes Populares</h2>
+        <div class="components-container">
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Procesador">
+                <div>
+                    <h3>Procesador Intel i7</h3>
+                    <p>Alto rendimiento para gaming y trabajo intensivo.</p>
+                    <button onclick="addToCart('Procesador Intel i7', 300)">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Tarjeta gráfica">
+                <div>
+                    <h3>Tarjeta Gráfica NVIDIA RTX 3080</h3>
+                    <p>Gráficos de última generación para gaming y edición.</p>
+                    <button onclick="addToCart('NVIDIA RTX 3080', 700)">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Memoria RAM">
+                <div>
+                    <h3>Memoria RAM 16GB</h3>
+                    <p>Velocidad y capacidad para multitarea eficiente.</p>
+                    <button onclick="addToCart('Memoria RAM 16GB', 80)">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Disco SSD">
+                <div>
+                    <h3>Disco SSD 1TB</h3>
+                    <p>Almacenamiento rápido para programas y juegos.</p>
+                    <button onclick="addToCart('Disco SSD 1TB', 120)">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Placa Base">
+                <div>
+                    <h3>Placa Base ASUS</h3>
+                    <p>Compatibilidad y estabilidad para todos los componentes.</p>
+                    <button onclick="addToCart('Placa Base ASUS', 200)">Añadir al carrito</button>
+                </div>
+            </div>
+            <div class="component">
+                <img src="https://via.placeholder.com/250x150" alt="Fuente de alimentación">
+                <div>
+                    <h3>Fuente de Alimentación 650W</h3>
+                    <p>Proporciona energía estable y segura a todos los componentes.</p>
+                    <button onclick="addToCart('Fuente de Alimentación 650W', 90)">Añadir al carrito</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección 3: Carrito -->
+    <section>
+        <h2>Carrito de Compras</h2>
+        <div id="cart"></div>
+        <p id="total">Total: $0</p>
+    </section>
+
+    <script>
+        let cartItems = [];
+        let total = 0;
+
+        function addToCart(name, price) {
+            cartItems.push({ name, price });
+            total += price;
+            renderCart();
+        }
+
+        function renderCart() {
+            const cartDiv = document.getElementById('cart');
+            cartDiv.innerHTML = '';
+            cartItems.forEach((item, index) => {
+                const div = document.createElement('div');
+                div.className = 'cart-item';
+                div.innerHTML = `
+                    ${item.name} - $${item.price} 
+                    <button onclick="removeFromCart(${index})">Eliminar</button>
+                `;
+                cartDiv.appendChild(div);
+            });
+            document.getElementById('total').innerText = `Total: $${total}`;
+        }
+
+        function removeFromCart(index) {
+            total -= cartItems[index].price;
+            cartItems.splice(index, 1);
+            renderCart();
+        }
+    </script>
+</body>
+</html>
+
