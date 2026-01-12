@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opiniones y Soporte</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #f0f2f5;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('https://images.unsplash.com/photo-1611078482962-7d23de8f7c1b?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+            color: white;
+            text-align: center;
+            padding: 5rem 1rem;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            animation: fadeInDown 1s ease;
+        }
+
+        nav {
+            margin-top: 1rem;
+        }
+
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: #f1c40f;
+            color: #2c3e50;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: -3rem auto 2rem;
+            padding: 3rem 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            animation: fadeIn 1s ease;
+        }
+
+        section:nth-child(2) { background: linear-gradient(135deg, #f9f9f9, #e8f5e9); }
+        section:nth-child(3) { background: linear-gradient(135deg, #f9f9f9, #fff3e0); }
+
+        section h2 {
+            color: #2c3e50;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2rem;
+            text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+        }
+
+        /* Opiniones */
+        .opinions-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .opinion-card {
+            background: #ffffff;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .opinion-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+
+        .opinion-card p {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .opinion-card strong {
+            color: #e67e22;
+        }
+
+        /* Botón WhatsApp */
+        .whatsapp-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #25D366, #128C7E);
+            color: white;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            text-decoration: none;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+        }
+
+        .whatsapp-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Responsive */
+        @media(max-width: 600px){
+            header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Opiniones y Soporte</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="opiniones.html">Opiniones y Soporte</a>
+        </nav>
+    </header>
+
+    <!-- Opiniones -->
+    <section>
+        <h2>Opiniones de Clientes</h2>
+        <div class="opinions-container">
+            <div class="opinion-card">
+                <p><strong>Ana G.</strong>: "Excelente experiencia, el montaje fue rápido y sencillo."</p>
+            </div>
+            <div class="opinion-card">
+                <p><strong>Carlos R.</strong>: "Los componentes son de gran calidad y funcionan a la perfección."</p>
+            </div>
+            <div class="opinion-card">
+                <p><strong>Lucía P.</strong>: "Muy recomendable, servicio rápido y atención al cliente muy amable."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Soporte WhatsApp -->
+    <section>
+        <h2>Soporte por WhatsApp</h2>
+        <p>¿Tienes dudas o necesitas ayuda? Contáctanos por WhatsApp:</p>
+        <a class="whatsapp-button" href="https://wa.me/34123456789" target="_blank">Chatear con soporte</a>
+    </section>
+</body>
+</html>
